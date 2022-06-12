@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Employee Form</title>
+</head>
+
+<body>
+    <h1>Register your employee here!</h1>
+
+    <form action="" method="POST">
+
+        {% csrf_token %}
+        <div>
+            <label for="emp_id">Employee Id</label>
+            <input type="text" name="emp_id" id="" placeholder="Employee Id:" class="input">
+        </div>
+        <div>
+            <label for="full_name">Full Name: </label>
+            <input type="text" name="full_name" id="" placeholder="Full Name:" class="input">
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="" placeholder="Email:" class="input">
+        </div>
+
+        <div>
+            <input type="submit" value="Submit" id="btn">
+        </div>
+
+    </form>
+</body>
+
+</html>

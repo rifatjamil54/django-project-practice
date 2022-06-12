@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center; background: powderblue">
+
+        <h1>Change Your Information</h1>
+    
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Name.." value="{{student_info_edit.m_name}}">
+            </div><br>
+    
+            <div>
+                <label for="roll">Board Roll</label>
+                <input type="number" name="roll" placeholder="roll.." value="{{student_info_edit.m_roll}}">
+            </div><br>
+    
+            <div>
+                <label for="registration_number">Registration Number</label>
+                <input type="number" name="registration_number" placeholder="registration number.." value="{{student_info_edit.m_number}}">
+            </div><br>
+    
+            <div>
+                <label for="year">Year</label>
+                <input type="number" name="year" placeholder="year.." value="{{student_info_edit.m_year}}">
+            </div><br>
+    
+            <input type="submit">
+    
+        </form>
+        </div>
+</body>
+</html>

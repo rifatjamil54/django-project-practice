@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <h1>All List</h1>
+
+    <table>
+
+        <theah>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </theah>
+
+
+        <tbody>
+            {% for new_user in user %}
+            <tr>
+                <td>{{new_user.id}}</td>
+                <td>{{new_user.e_id}}</td>
+                <td>{{new_user.e_name}}</td>
+                <td>{{new_user.e_email}}</td>
+                <td>
+                    <a href="/edit/{{ new_user.id }}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+                    <a href="/delete/{{ new_user.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+
+</body>
+</html>

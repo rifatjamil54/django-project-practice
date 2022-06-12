@@ -1,0 +1,23 @@
+h1, form, input {
+    text-align: center;
+}
+
+form {
+    margin-top: 60px;
+}
+
+div {
+    margin: 20px;
+}
+
+#btn {
+    padding: 15px 40px;
+    margin: 20px;
+    background-color: rgb(17, 236, 17);
+    color: white
+    ;
+}
+
+.input {
+    padding:15px 10%;
+}

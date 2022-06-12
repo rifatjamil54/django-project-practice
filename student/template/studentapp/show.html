@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Student Information</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Showing Student Information</h1>
+        <div>
+            <table style="text-align: center;" width="50" height="100">
+                <thead style="background-color: darksalmon;" >
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Board Roll</th>
+                    <th>Registration Number</th>
+                    <th>Year</th>
+                </thead>
+                <tbody style="background-color: powderblue;">
+                    {% for stu in students %}
+                    <tr>
+                        <td>{{stu.id}}</td>
+                        <td>{{stu.m_name}}</td>
+                        <td>{{stu.m_roll}}</td>
+                        <td>{{stu.m_number}}</td>
+                        <td>{{stu.m_year}}</td>
+                        <td>
+                            <a href="/edit/{{ stu.id }}">Edit</a>
+                            <a href="/delete/{{ stu.id }}">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
